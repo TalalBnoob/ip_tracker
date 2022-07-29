@@ -1,10 +1,19 @@
 import React from 'react';
 
-const SearchBar = () => {
+const SearchBar = ({ sendIp, onEnterPress }) => {
 	return (
 		<div className="addBar">
-			<input className="bar" type="text" placeholder="Search for any IP address or domain" />
-			<input className="btn" type="submit" value=">" />
+			<form>
+				<input
+					className="bar"
+					type="text"
+					placeholder="Search for any IP address or domain"
+					onKeyPress={e => onEnterPress(e)}
+				/>
+				<button className="btn" onClick={e => sendIp(e)}>
+					{'>'}
+				</button>
+			</form>
 		</div>
 	);
 };

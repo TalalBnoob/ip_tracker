@@ -3,14 +3,14 @@ body {
 	width: 100%;
 	background-image: url('./assets/pattern-bg.png');
 	background-position: top;
-	background-size: 100% 300px;
+	background-size: 100% 350px;
 	background-repeat: no-repeat;
 }
 
 h1.title {
 	color: white;
 	text-align: center;
-	margin-top: 30px;
+	margin-top: 40px;
 	font-weight: 700;
 	font-size: 45px;
 }
@@ -31,19 +31,60 @@ div.addBar {
 		font-size: x-large;
 	}
 
-	input.btn {
+	button.btn {
 		margin-top: 30px;
 		width: 70px;
 		height: 75px;
 		border-radius: 0 20px 20px 0;
 		border: none;
-		background-color: black;
+		background-color: hsl(0, 0%, 17%);
 		color: white;
 		font-size: x-large;
 		font-weight: 700;
+		cursor: pointer;
+
+		&:hover {
+			background-color: hsl(0, 0%, 29%);
+		}
+	}
+}
+
+.infoBox {
+	width: 80%;
+	height: fit-content;
+	background-color: white;
+	border-radius: 20px;
+	margin: 3rem auto;
+	border: solid 1px black;
+
+	div {
+		margin: 25px auto;
+		display: flex;
+
+		hr {
+			color: hsl(0, 0%, 83%);
+			border-radius: 50%;
+		}
+
+		div {
+			display: block;
+
+			h4 {
+				font-size: 15px;
+				letter-spacing: 2px;
+				color: hsl(0, 0%, 29%);
+			}
+
+			h1 {
+				font-size: 32px;
+				font-weight: 500;
+				letter-spacing: 2px;
+				color: hsl(0, 0%, 17%);
+			}
+		}
 	}
 }
 
 #map {
-	height: 200px;
+	height: 100ch;
 }
